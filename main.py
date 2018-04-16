@@ -11,9 +11,18 @@ except:
 cur = conn.cursor()
 
 cur.execute("DELETE FROM cycle_location");
+
+importers = [
+    citybikes.importer.CityBikesImporter(),
+    ovfiets.importer.OVFietsImporter()
+]
+
+
 while True:
-    cycles = citybikes.importer.import_feeds()
-    cycles = cycles + (ovfiets.importer.import_feed())
+    cycles = []
+    cur.execute("DELETE FROM cycle_location");
+    for importer in importers:
+        cycles += importer.import_feed()
     list(map(lambda cycle: cycle.save(cur), cycles))
     conn.commit()
     print("completed")
