@@ -10,7 +10,7 @@ class CityBikesImporter():
 
     def import_station(self, feed, station):
         return cycle_location.CycleLocation(feed + ':' + station["id"], station["latitude"],
-            station["longitude"], station["timestamp"])
+            station["longitude"], feed, "station", station["timestamp"])
 
     def import_json(self, feed, json):
         cycles = []

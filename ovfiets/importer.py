@@ -6,7 +6,7 @@ class OVFietsImporter():
     def import_station(self, id, station):
         id = "ovfiets:" + id
         return cycle_location.CycleLocation(id, station["lat"],
-            station["lng"], station["extra"]["fetchTime"])
+            station["lng"], "ovfiets", "station", station["extra"]["fetchTime"])
 
     def import_json(self, json):
         cycles = []

@@ -2,7 +2,9 @@ CREATE TABLE cycle_location (
     id                  VARCHAR(255),
     location            GEOGRAPHY,
     type                VARCHAR(255),
+    system_id           VARCHAR(255),
     last_time_updated   TIMESTAMP,
+    last_time_imported  TIMESTAMP,
     PRIMARY KEY(id)
 );
 
