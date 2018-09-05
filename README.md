@@ -13,8 +13,7 @@ This table shows which operators already have made data available.
 | FlickBike| :white_check_mark: | - |
 | Hello-bike| :x: | - |
 | Mobike| :x: | - |
-| Nextbike| :white_check_mark:/ | :white_check_mark: https://api.nextbike.net/maps/gbfs/v1/nextbike_nl/gbfs.json
-https://api.nextbike.net/maps/gbfs/v1/nextbike_nd/gbfs.json |
+| Nextbike| :white_check_mark: | :white_check_mark: https://api.nextbike.net/maps/gbfs/v1/nextbike_nl/gbfs.json, https://api.nextbike.net/maps/gbfs/v1/nextbike_nd/gbfs.json |
 | Urbee| :x: | - |
 | Gobike| :x: | - |
 
