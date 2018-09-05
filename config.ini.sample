@@ -1,0 +1,5 @@
+[flickbike]
+url = <http://example.com>
+
+[donkey]
+token = <TOKEN>
