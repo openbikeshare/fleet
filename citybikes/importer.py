@@ -4,8 +4,6 @@ import cycle_location
 class CityBikesImporter():
     def __init__(self):
         self.feeds = [{'operator': 'cykl', 'url': 'https://api.citybik.es/v2/networks/cykl'},
-                {'operator': 'nextbike_rotterdam', 'url': 'https://api.citybik.es/v2/networks/nextbike-rotterdam'},
-                {'operator': 'nextbike_maastricht', 'url': 'https://api.citybik.es/v2/networks/nederland-maastricht'},
                 {'operator': 'nu-connect', 'url': 'https://api.citybik.es/v2/networks/nu-connect'}] 
 
     def import_station(self, feed, station):
@@ -22,5 +20,6 @@ class CityBikesImporter():
         cycles = []
         for feed in self.feeds:
             r = requests.get(feed['url'])
+            print(r.status_code)
             cycles += self.import_json(feed['operator'], r.json())
         return cycles

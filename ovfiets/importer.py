@@ -15,5 +15,8 @@ class OVFietsImporter():
         return cycles
 
     def import_feed(self):
-        r = requests.get("http://fiets.openov.nl/locaties.json")
-        return self.import_json(r.json())
+        try: 
+            r = requests.get("http://fiets.openov.nl/locaties.json")
+            return self.import_json(r.json())
+        except:
+            return []

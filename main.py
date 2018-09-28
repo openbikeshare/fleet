@@ -2,6 +2,7 @@ import citybikes.importer
 import ovfiets.importer
 import flickbike.importer
 import donkey.importer
+import gbfs_importer.importer
 import cacher.cacher
 import time
 import psycopg2
@@ -14,7 +15,8 @@ importers = [
     citybikes.importer.CityBikesImporter(),
     ovfiets.importer.OVFietsImporter(),
     flickbike.importer.FlickBikeImporter(config['flickbike']['url']),
-    donkey.importer.DonkeyRepublicImporter(config['donkey']['token'])
+    donkey.importer.DonkeyRepublicImporter(config['donkey']['token']),
+    gbfs_importer.importer.GbfsImporter()
 ]
 
 try:
