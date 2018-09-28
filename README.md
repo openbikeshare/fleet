@@ -6,20 +6,18 @@ This table shows which operators already have made data available.
 | Operator | Data available | Data available in standardized format* |
 | --- |  :---: | --- |
 | BimBimBikes | :x: | - |
-| Cykl | :white_check_mark: | - |
+| Cykl | :white_check_mark: | :white_check_mark: https://www.cykl.nl/gbfs/gbfs.json |
 | Donkey Republic | :white_check_mark: | - |
 | Du Nord / Haagsche stadsfiets | :x: | - |
 | Emotion sustainable mobility | :x: | - |
 | FlickBike| :white_check_mark: | - |
 | Hello-bike| :x: | - |
 | Mobike| :x: | - |
-| Nextbike| :white_check_mark:/:x:** | - |
+| Nextbike| :white_check_mark: | :white_check_mark: https://api.nextbike.net/maps/gbfs/v1/nextbike_nl/gbfs.json, https://api.nextbike.net/maps/gbfs/v1/nextbike_nd/gbfs.json |
 | Urbee| :x: | - |
 | Gobike| :x: | - |
 
 \* Standard has yet to be determined. https://github.com/NABSA/gbfs is one of the considered options(maybe needs some improvements). If you have an idea for another standard please create an issue.
-
-\*\* Maastricht is included. Dordrecht is missing
 
 In this table are all parties included that did not sign the letter of intent for the development of the open standard, but do have data about the availability of their bicycles available. 
 
