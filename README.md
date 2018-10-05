@@ -3,7 +3,7 @@ This tool is used to import all available data of bikesharing operators in the N
 
 This table shows which operators already have made data available.
 
-| Operator | Data available | Data available in standardized format* |
+| Operator | Data available | Data available in GBFS+* |
 | --- |  :---: | --- |
 | BimBimBikes | :x: | - |
 | Cykl | :white_check_mark: | :white_check_mark: https://www.cykl.nl/gbfs/gbfs.json |
@@ -17,7 +17,7 @@ This table shows which operators already have made data available.
 | Urbee| :x: | - |
 | Gobike| :x: | - |
 
-\* Standard has yet to be determined. https://github.com/NABSA/gbfs is one of the considered options(maybe needs some improvements). If you have an idea for another standard please create an issue.
+\* GBFS+: https://github.com/openbikeshare/gbfsplus
 
 In this table are all parties included that did not sign the letter of intent for the development of the open standard, but do have data about the availability of their bicycles available. 
 
