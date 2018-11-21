@@ -1,5 +1,6 @@
 import requests
 import cycle_location
+from .free_bike_status_importer import FreeBikeStatusImporter
 
 class GbfsImporter():
     def __init__(self):
@@ -17,18 +18,9 @@ class GbfsImporter():
             cycles.append(self.import_station(operator, station, json["last_updated"]))
         return cycles
 
-    def import_free_bike_status(self, operator, cycle, last_updated):
-        return cycle_location.CycleLocation(operator + ':' + cycle["bike_id"], cycle["lat"],
-                            cycle["lon"], operator, "bike", last_updated)
-
-    def import_free_bike_status_json(self, operator, json):
-        cycles = []
-        for cycle in json["data"]["bikes"]:
-            cycles.append(self.import_free_bike_status(operator, cycle, json["last_updated"]))
-        return cycles
-
     def import_json(self, operator, json):
         cycles = []
+        free_bike_status_import = FreeBikeStatusImporter(operator)
         if json["data"]["en"]["feeds"]:
             for feed in json["data"]["en"]["feeds"]:
                 if feed["name"] == "station_information":
@@ -36,7 +28,8 @@ class GbfsImporter():
                     cycles += self.import_station_json(operator, r.json())
                 if feed["name"] == "free_bike_status":
                     r = requests.get(feed["url"])
-                    cycles += self.import_free_bike_status_json(operator, r.json())
+                    cycles += free_bike_status_import.import_free_bike_status_json(r.json())
+                    print(cycles)
         return cycles 
 
     def import_feed(self):

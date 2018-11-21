@@ -3,6 +3,7 @@ import ovfiets.importer
 import flickbike.importer
 import donkey.importer
 import gbfs_importer.importer
+import mobike.importer
 import cacher.cacher
 import time
 import psycopg2
@@ -12,6 +13,7 @@ config = configparser.ConfigParser()
 config.read('config.ini')
 
 importers = [
+    mobike.importer.MobikeImporter(config['mobike']['url']),
     citybikes.importer.CityBikesImporter(),
     ovfiets.importer.OVFietsImporter(),
     flickbike.importer.FlickBikeImporter(config['flickbike']['url']),
@@ -20,7 +22,7 @@ importers = [
 ]
 
 try:
-    conn = psycopg2.connect("dbname='openbikeshare_data'")
+    conn = psycopg2.connect("dbname='%s'" % config['db']['db'])
 except:
     print("Unable to connect to the database")
 
