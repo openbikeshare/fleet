@@ -12,7 +12,11 @@ import configparser
 config = configparser.ConfigParser()
 config.read('config.ini')
 
-#nog toevoegen:     gbfs.importer.GbfsImport(config['mobike']['url']),
+print("start nu ")
+print(config['flickbike']['url'])
+print(config['db']['db'])
+print(" . . ...... ")
+# nog toevoegen:     gbfs.importer.GbfsImport(config['mobike']['url']),
 
 
 importers = [
@@ -25,7 +29,7 @@ importers = [
 conn = None
 
 try:
-    conn = psycopg2.connect("dbname='ro'")
+    conn = psycopg2.connect(config['db']['db'])
 except:
     print("Unable to connect to the database")
 
