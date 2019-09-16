@@ -1,3 +1,5 @@
+CREATE EXTENSION IF NOT EXISTS postgis;
+
 CREATE TABLE cycle_location (
     id                  VARCHAR(255),
     location            GEOGRAPHY,

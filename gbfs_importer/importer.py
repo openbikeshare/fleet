@@ -4,7 +4,8 @@ import cycle_location
 class GbfsImporter():
     def __init__(self):
         self.feeds = [{'operator': 'nextbike', 'url': 'https://api.nextbike.net/maps/gbfs/v1/nextbike_nl/gbfs.json'},
-                {'operator': 'nextbike', 'url': 'https://api.nextbike.net/maps/gbfs/v1/nextbike_nd/gbfs.json'}] 
+                {'operator': 'nextbike', 'url': 'https://api.nextbike.net/maps/gbfs/v1/nextbike_nd/gbfs.json'},
+                {'operator': 'cykl', 'url': 'https://www.cykl.nl/gbfs/gbfs.json'}] 
 
     def import_station(self, operator, station, last_updated):
         return cycle_location.CycleLocation(operator + ':' + station["station_id"], station["lat"],
@@ -18,7 +19,7 @@ class GbfsImporter():
         return cycles
 
     def import_free_bike_status(self, operator, cycle, last_updated):
-        return cycle_location.CycleLocation(operator + ':' + cycle["bike_id"], cycle["lat"],
+        return cycle_location.CycleLocation(operator + ':' + cycle["bike_id"] + ':bike', cycle["lat"],
                             cycle["lon"], operator, "bike", last_updated)
 
     def import_free_bike_status_json(self, operator, json):

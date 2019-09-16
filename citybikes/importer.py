@@ -3,8 +3,7 @@ import cycle_location
 
 class CityBikesImporter():
     def __init__(self):
-        self.feeds = [{'operator': 'cykl', 'url': 'https://api.citybik.es/v2/networks/cykl'},
-                {'operator': 'nu-connect', 'url': 'https://api.citybik.es/v2/networks/nu-connect'}] 
+        self.feeds = [{'operator': 'nu-connect', 'url': 'https://api.citybik.es/v2/networks/nu-connect'}] 
 
     def import_station(self, feed, station):
         return cycle_location.CycleLocation(feed + ':' + station["id"], station["latitude"],
