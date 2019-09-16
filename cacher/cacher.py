@@ -1,9 +1,8 @@
-import redis
 
 class Cacher():
-    def __init__(self, conn):
+    def __init__(self, conn, r):
         self.conn = conn
-        self.r = redis.Redis()
+        self.r = r
 
     def cache_coverage(self):
         query = """

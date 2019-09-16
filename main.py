@@ -8,6 +8,7 @@ import time
 import psycopg2
 import configparser
 import os
+import redis
 
 config = configparser.ConfigParser()
 config.read('config.ini')
@@ -30,7 +31,14 @@ try:
 except:
     print("Unable to connect to the database")
 
-cacher = cacher.cacher.Cacher(conn)
+redis = None
+if os.environ.get("PRODUCTION") == True:
+    redis = redis.Redis(host=os.getenv("REDIS_HOST"), password=os.getenv("REDIS_PASSWORD"))
+else:
+    redis = redis.Redis()
+
+
+cacher = cacher.cacher.Cacher(conn, redis)
 
 
 def import_bikes(conn):
