@@ -22,7 +22,7 @@ importers = [
 ]
 
 conn_str = None
-if os.environ.get("PRODUCTION") == True:
+if os.environ.get("PRODUCTION") == "true":
     conn_str = "postgresql://openbike:%s@%s" % (os.getenv("DB_PASSWORD"), os.getenv("DB_URL"))
 else:
     conn_str = "dbname='openbikeshare_data'"
