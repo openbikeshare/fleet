@@ -31,14 +31,7 @@ try:
 except:
     print("Unable to connect to the database")
 
-redis = None
-if os.environ.get("PRODUCTION") == True:
-    redis = redis.Redis(host=os.getenv("REDIS_HOST"), password=os.getenv("REDIS_PASSWORD"))
-else:
-    redis = redis.Redis()
-
-
-cacher = cacher.cacher.Cacher(conn, redis)
+cacher = cacher.cacher.Cacher(conn)
 
 
 def import_bikes(conn):

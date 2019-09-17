@@ -18,3 +18,13 @@ CREATE TABLE station (
     open247     BOOLEAN
 );
 
+CREATE EXTENSION IF NOT EXISTS HSTORE;
+
+CREATE TABLE cache (
+  id serial PRIMARY KEY,
+  name varchar,
+  attributes hstore
+);
+
+INSERT INTO cache VALUES (1, 'geocache', hstore(ARRAY[['coverage', null]]));
+
