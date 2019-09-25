@@ -7,7 +7,7 @@ class Cacher():
         query = """
         SELECT ST_AsGeoJSON(ST_UNION(geometry(q1.buffered))) 
         FROM (
-            SELECT ST_Buffer(location, 500) as buffered 
+            SELECT ST_Buffer(location, 200) as buffered 
             FROM cycle_location ) 
         as q1"""
         cur = self.conn.cursor()
