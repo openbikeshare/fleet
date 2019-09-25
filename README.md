@@ -25,3 +25,4 @@ In this table are all parties included that did not sign the letter of intent fo
 | --- | :---: | --- |
 | OVFiets/NS | :white_check_mark: | - |
 | nu-connect | :white_check_mark: | - |
+| HTMFiets (HTM) | :white_check_mark: | :white_check_mark: |
