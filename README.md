@@ -3,7 +3,7 @@ This tool is used to import all available data of bikesharing operators in the N
 
 This table shows which operators already have made data available.
 
-| Operator | Data available | Data available in GBFS+* |
+| Operator | Data available | Data available in GBFS* |
 | --- |  :---: | --- |
 | BimBimBikes | :x: | - |
 | Cykl | :white_check_mark: | :white_check_mark: https://www.cykl.nl/gbfs/gbfs.json |
