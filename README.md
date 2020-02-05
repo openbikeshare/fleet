@@ -23,6 +23,6 @@ In this table are all parties included that did not sign the letter of intent fo
 
 | Operator | Data available | Data available in standardized format* |
 | --- | :---: | --- |
-| OVFiets/NS | :white_check_mark: | - |
+| OVFiets/NS | :white_check_mark: | unofficial GBFS by OpenOV http://gbfs.openov.nl/ovfiets/ |
 | nu-connect | :white_check_mark: | - |
 | HTMFiets (HTM) | :white_check_mark: | :white_check_mark: https://htmconnector-api.joyridecity.bike/api/v1/gbfs.json |
