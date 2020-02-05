@@ -17,7 +17,7 @@ This table shows which operators already have made data available.
 | Urbee| :x: | - |
 | Gobike| :x: | - |
 
-\* GBFS+: https://github.com/openbikeshare/gbfsplus
+\* GBFS+: https://github.com/NABSA/gbfs
 
 In this table are all parties included that did not sign the letter of intent for the development of the open standard, but do have data about the availability of their bicycles available. 
 
