@@ -28,6 +28,7 @@ In this table are all parties included that did not sign the letter of intent fo
 | HTMFiets (HTM) | :white_check_mark: | :white_check_mark: https://htmconnector-api.joyridecity.bike/api/v1/gbfs.json |
 
 Mopeds:
+| Operator | Data available | Data available in standardized format* |
 | --- | :---: | --- |
 | Felyx | ? | ? |
 | Gosharing | ? | ? |
